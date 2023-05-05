@@ -2,6 +2,7 @@ import React, { useContext, } from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../../provider/AuthProviders';
+import { FaGithub } from 'react-icons/fa';
 
 const Login = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
