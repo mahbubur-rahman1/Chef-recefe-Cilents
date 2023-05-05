@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 // import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../../provider/AuthProviders';
 import { FaGithub } from 'react-icons/fa';
+import { toast } from 'react-hot-toast';
 
 const Login = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
@@ -23,13 +24,17 @@ const Login = () => {
         // console.log(email, password)
 
 
-    
+    if(password.length < 6){
+        toast.error('please provite 6 number')
+        return;
+    }
       
         signIn(email, password)
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
             navigate(from, {replace: true})
+            toast.success('success login')
         })
         .catch(error => console.log(error))
     }

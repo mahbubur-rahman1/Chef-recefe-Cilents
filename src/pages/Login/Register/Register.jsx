@@ -15,6 +15,10 @@ const Register = () => {
 
         // console.log(name, password, email, photo)
 
+        if(password.length < 6){
+            toast.error('please provite 6 number')
+            return;
+        }
         createUser(email, password)
         .then(result => {
             const createdUser = result.user;
