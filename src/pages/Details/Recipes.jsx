@@ -1,7 +1,7 @@
 import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Rating } from '@smastrom/react-rating'
-import '@smastrom/react-rating/style.css'
+import Rating  from 'react-rating'
+
 
 const  Recipes = ({recipe}) => {
     const {photo_url, recipes_name, cooking, ingredients, rating} = recipe;

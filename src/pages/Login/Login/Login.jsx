@@ -1,6 +1,6 @@
 import React, { useContext, } from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaGoogle, FaGithub } from 'react-icons/fa';
+// import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../../provider/AuthProviders';
 
 const Login = () => {
