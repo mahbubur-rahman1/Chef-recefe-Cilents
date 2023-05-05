@@ -1,12 +1,12 @@
 import React from 'react';
-import img from '../../../assets/footer-img.png'
+
 
 const Footer = () => {
     return (
         <> 
         <footer className="mt-5 footer p-10 bg-black text-white">
   <div>
-    <img className='w-[250px] h-[200px]' src={img} alt="" />
+    <img className='w-[250px] h-[200px]' src="https://www.shutterstock.com/image-vector/cartoon-illustration-cheerful-chef-cook-260nw-791305150.jpg" alt="" />
     
   </div> 
   <div>
