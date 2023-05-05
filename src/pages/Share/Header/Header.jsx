@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../../provider/AuthProviders';
 import ActiveLink from '../../ActiveLink/ActiveLink';
+import { FaUserCircle } from 'react-icons/fa';
 
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const handleLogout = () => {
         logOut()
             .then()
@@ -24,14 +25,14 @@ const Header = () => {
                             <li><ActiveLink to='/'>Home</ActiveLink></li>
                             <li tabIndex={0}>
                                 <ActiveLink to='/blogs' className="justify-between">
-                                   Blogs
+                                    Blogs
                                 </ActiveLink>
-                               
+
                             </li>
                             <li><ActiveLink to='/about'>About</ActiveLink></li>
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl">Chef Bazar</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-2xl"><span className=' text-yellow-300'>C</span>hef  <span className=' text-red-600 pl-2'> B</span>azar</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white">
@@ -40,14 +41,18 @@ const Header = () => {
                             <ActiveLink to='/blogs'>
                                 Blogs
                             </ActiveLink>
-                            
+
                         </li>
                         <li><ActiveLink to='about' >About</ActiveLink></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
-                   {user? <Link onClick={handleLogout} className="btn">Logout</Link> :
-                    <Link to='/login' className="btn">Login</Link>}
+
+                <div className="navbar-end gap-2">
+                    {
+                        user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
+                    }
+                    {user ? <Link onClick={handleLogout} className="btn bg-purple-900">Logout</Link> :
+                        <Link to='/login' className="btn">Login</Link>}
                 </div>
             </div>
         </div>

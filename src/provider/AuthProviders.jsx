@@ -55,7 +55,7 @@ const [loading, setLoading] = useState(true);
 
     useEffect( () => {
        const unsubscribe = onAuthStateChanged( auth,  loggedUser => {
-            console.log('Logged in user inside auth', loggedUser)
+            // console.log('Logged in user inside auth', loggedUser)
             setUser(loggedUser);
             setLoading(false);
             

@@ -14,17 +14,17 @@ const Details = () => {
            <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure><img className='' src={photo_url} alt="Album"/></figure>
             <div className="card-body">
-                <h2 className="card-title"><span className='text-red-800 font-bold'> Chef-Name: </span>{name}</h2>
-                <p className='text-slate-600'><span className='text-red-800 font-bold'> Short-Description: </span>{description}</p>
-                <p className='text-slate-600'><span className='text-red-800 font-bold'> Total Recipes: </span>{recipes_numbers} items</p>
-                <p className='text-slate-600'><span className='text-red-800 font-bold'> Experience: </span>{ experience_years} Years</p>
-                <p className='text-slate-600 flex gap-2'><span className='text-red-800 font-bold'> Total-Likes: </span> <span className='flex gap-1'>{ likes} </span> </p>
+                <h2 className="card-title"><span className='text-red-400 font-bold'> Chef-Name: </span>{name}</h2>
+                <p className='text-slate-100'><span className='text-red-400 font-bold'> Short-Description: </span>{description}</p>
+                <p className='text-purple-200'><span className='text-red-400 font-bold'> Total Recipes: </span>{recipes_numbers} items</p>
+                <p className='text-purple-200'><span className='text-red-400 font-bold'> Experience: </span>{ experience_years} Years</p>
+                <p className=' flex gap-2' ><span className='text-red-400 font-bold'> Total-Likes: </span> <span className='flex gap-1 text-purple-200'>{ likes} </span> </p>
                                     
             </div>
             </div>
 
 
-                <h2 className='text-red-700 text-4xl text-center font-bold p-3'>Some Recipes of <span className='text-sky-600'> {name}</span> </h2>
+                <h2 className='text-white  text-4xl text-center font-bold p-3'>Some Recipes of <span className='text-sky-400'> {name}</span> </h2>
            
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 justify-between mt-5'>
             {

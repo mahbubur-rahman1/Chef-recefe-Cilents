@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineCheck } from "react-icons/hi";
 
+
 const Chef = ({chef}) => {
     const {name, id, recipes_numbers, experience_years, photo_url, likes} = chef;
     return (

@@ -13,7 +13,7 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(name, password, email, photo)
+        // console.log(name, password, email, photo)
 
         createUser(email, password)
         .then(result => {
@@ -33,25 +33,25 @@ const Register = () => {
                     <span className="label-text font-bold">What is your name ?</span>
                     
                 </label>
-                <input type="text" name='name' placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                <input type="text" name='name' placeholder="Type here"  required className="input input-bordered w-full max-w-xs" />
 
                 <label className="label">
                     <span className="label-text font-bold">What is your image URL ?</span>
                     
                 </label>
-                <input type="text" name='photo' placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                <input type="text" name='photo' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
 
                 <label className="label">
                     <span className="label-text font-bold">What is your Email ?</span>
                     
                 </label>
-                <input type="email" name='email' placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                <input type="email" name='email' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
 
                 <label className="label">
                     <span className="label-text font-bold">What is your Password?</span>
                     
                 </label>
-                <input type="password" name='password' placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                <input type="password" name='password' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
 
                 <button className='btn btn-accent mt-2' type='submit'>Register</button>
 

@@ -5,12 +5,11 @@ import { AuthContext } from '../../../provider/AuthProviders';
 
 const Login = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
-    
-    
+
 
     const navigate = useNavigate();
     const location = useLocation();
-    console.log('login page location', location)
+    // console.log('login page location', location)
     const from = location.state?.from?.pathname || '/'
 
 
@@ -20,8 +19,11 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email, password)
+        // console.log(email, password)
 
+
+    
+      
         signIn(email, password)
         .then(result => {
             const loggedUser = result.user;
@@ -47,23 +49,23 @@ const Login = () => {
                     <span className="label-text font-bold">What is your Email ?</span>
 
                 </label>
-                <input type="email" name='email' placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                <input type="email" name='email' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
 
                 <label className="label">
                     <span className="label-text font-bold">What is your Password?</span>
 
                 </label>
-                <input type="password"  name='password' placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                <input type="password"  name='password' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
 
 
                 <button className='btn btn-accent mt-2' type='submit'>Login</button>
 
                 <p>Don't have an account <span> <Link className='link link-primary' to="/register">Registration</Link></span></p>
-                <p className='btn btn-error w-80 py-2 mt-2 mx-auto text-center'>
-                  <FaGoogle onClick={handleGoogleSignIn} className=' w-10 h-7'></FaGoogle>  Login With Google
+                <p onClick={handleGoogleSignIn} className='btn btn-error w-80 py-2 mt-2 mx-auto text-center'>
+                  <FaGoogle  className=' w-10 h-7'></FaGoogle>  Login With Google
                 </p>
-                <p className='btn bg-black w-80 py-2 mt-2 mx-auto text-center'>
-                    <FaGithub onClick={handleGithubSignIn} className=' w-10 h-7'></FaGithub>
+                <p onClick={handleGithubSignIn} className='btn bg-black w-80 py-2 mt-2 mx-auto text-center'>
+                    <FaGithub  className=' w-10 h-7'></FaGithub>
                 Login With GitHub 
             </p>
             </form>
