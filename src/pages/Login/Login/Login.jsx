@@ -52,13 +52,13 @@ const Login = () => {
             <form onSubmit={handleLogin}  className="form-control w-full max-w-xs mx-auto">
 
                 <label className="label">
-                    <span className="label-text font-bold">What is your Email ?</span>
+                    <span className="label-text font-bold">What  your Email ?</span>
 
                 </label>
                 <input type="email" name='email' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
 
                 <label className="label">
-                    <span className="label-text font-bold">What is your Password?</span>
+                    <span className="label-text font-bold">What is yours Password?</span>
 
                 </label>
                 <input type="password"  name='password' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
