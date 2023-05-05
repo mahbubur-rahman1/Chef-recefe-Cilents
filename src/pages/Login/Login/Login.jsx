@@ -62,7 +62,7 @@ const Login = () => {
 
                 <p>Don't have an account <span> <Link className='link link-primary' to="/register">Registration</Link></span></p>
                 <p onClick={handleGoogleSignIn} className='btn btn-error w-80 py-2 mt-2 mx-auto text-center'>
-                  <FaGoogle  className=' w-10 h-7'></FaGoogle>  Login With Google
+                    Login With Google
                 </p>
                 <p onClick={handleGithubSignIn} className='btn bg-black w-80 py-2 mt-2 mx-auto text-center'>
                     <FaGithub  className=' w-10 h-7'></FaGithub>
